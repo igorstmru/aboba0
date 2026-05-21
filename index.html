@@ -6,6 +6,18 @@
     <meta http-equiv="refresh" content="0; url=https://st-ru.notion.site/3574af974bd980248528e044531c41b8?source=copy_link">
 </head>
 <body>
-    <p>Если вы не были перенаправлены автоматически, <a href="https://st-ru.notion.site/3574af974bd980248528e044531c41b8?source=copy_link">нажмите сюда</a>.</p>
+    <p>Вы будете перенаправлены через <span id="timer">3</span> секунд.</p>
+<script>
+    let seconds = 3;
+    const timerElement = document.getElementById('timer');
+    const interval = setInterval(() => {
+        seconds--;
+        timerElement.textContent = seconds;
+        if (seconds <= 0) {
+            clearInterval(interval);
+            window.location.href = "https://example.com";
+        }
+    }, 1000);
+</script>
 </body>
 </html>
